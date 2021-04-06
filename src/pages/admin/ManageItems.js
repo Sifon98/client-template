@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from "framer-motion";
 import ManageComp from '../../components/admin/ManageComp';
+import styles from '../../components/styleModules/manage.module.css';
 
 export default function ManageItem() {
     const [posts, setPosts] = useState([]);
@@ -39,15 +41,15 @@ export default function ManageItem() {
     // Display all posts with buttons to edit and delete
     return (
         <div className="container padding-bot">
-            <h1 className="mt-4">All Items</h1>
-            <Link className="create-button btn btn-success btn-lg" to='/create-post'>Create</Link>
-                <table className="table">
-                    <thead>
+            <Link className={`${styles.createBtn} btn btn-success btn-lg`} to='/create-post'>Ny vara</Link>
+            <motion.div initial={{ scale: 0.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.8 }}>
+                <table className="table table-striped">
+                    <thead class="thead-dark">
                         <tr>
-                        <th >Titel</th>
-                        <th >Pris</th>
-                        <th >Lager</th>
-                        <th >Hantera</th>
+                            <th >Titel</th>
+                            <th >Pris</th>
+                            <th >Lager</th>
+                            <th >Hantera</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -55,9 +57,10 @@ export default function ManageItem() {
                         return (
                             <ManageComp post={post} key={post['_id']} deletePost={deletePost}/>
                         )}
-                    )} 
+                    )}
                     </tbody>
                 </table>
+            </motion.div>
         </div>
     )
 }

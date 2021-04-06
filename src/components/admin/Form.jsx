@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import styles from '../styleModules/form.module.css';
 
 export default function UpdateForm({post, handleSubmit, handleChange, code}) {
 
@@ -54,46 +55,46 @@ export default function UpdateForm({post, handleSubmit, handleChange, code}) {
     return (
         <form onSubmit={submitForm}>
             <div className="container">
-                <div className='create-form'>
-                <label>Title:</label>
+                <div className={styles.text}>
+                <label>Titel:</label>
 
                 <textarea name='title' value={post.title} onChange={checkValidation} cols="30" rows="2" 
                 className={`form-control mb-2 
                 ${showValidation ? 
-                isValidated["title"] === true ? "validate" : "no-validate" 
+                isValidated["title"] === true ? styles.validate : styles.unvalid
                 : null}`} required></textarea>
 
-                <label>Description:</label>
+                <label>Beskrivning:</label>
 
                 <textarea name='description' value={post.description}  onChange={checkValidation} cols="30" rows="10" 
                 className={`form-control mb-2 
                 ${showValidation ? 
-                isValidated["description"] === true ? "validate" : "no-validate" 
+                isValidated["description"] === true ? styles.validate : styles.unvalid
                 : null}`} required></textarea>
 
-                <label>Price:</label>
+                <label>Pris:</label>
 
                 <textarea name='price' value={post.price} onChange={checkValidation} cols="30" rows="2" 
-                className={`form-control mb-2 ${showValidation ? isValidated["price"] === true ? "validate" : "no-validate" : null}`} required></textarea>
+                className={`form-control mb-2 ${showValidation ? isValidated["price"] === true ? styles.validate : styles.unvalid : null}`} required></textarea>
 
-                <label>Stock:</label>
+                <label>På lager:</label>
 
                 <textarea name='stock' value={post.stock} onChange={checkValidation} cols="30" rows="2" 
                 className={`form-control mb-2 
                 ${
-                showValidation ? isValidated["stock"] === true ? "validate" : "no-validate" 
+                showValidation ? isValidated["stock"] === true ? styles.validate : styles.unvalid
                 : null}`} required></textarea>
 
-                <label>Category:</label>
+                <label>Kategori:</label>
                 <textarea name='category' value={post.category} onChange={checkValidation} cols="30" rows="2" 
                 className={`form-control mb-2 
                 ${
-                showValidation ? isValidated["category"] === true ? "validate" : "no-validate" 
+                showValidation ? isValidated["category"] === true ? styles.validate : styles.unvalid
                 : null}`}></textarea>
                     
                 </div>
                 <button className="btn btn-success btn-lg m-2">{buttonCode}</button>
-                <Link to='/manage-post'><button className="btn btn-outline-secondary btn-lg m-2">&larr; Back</button></Link>
+                <Link to='/manage-post'><button className="btn btn-outline-secondary btn-lg m-2">&larr; Backa</button></Link>
             </div>
         </form>
     )

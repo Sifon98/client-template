@@ -21,10 +21,9 @@ export default function ItemPages({match}) {
     return (
         <div className="container">
             <div className="card m-4">
-                <ItemComp post={post} test="single"/>
-                <Link to='/' ><button className="btn btn-outline-dark">&larr; Back</button></Link>
+                <ItemComp post={post} length="single"/>
+                <Link to='/' ><button className="btn btn-outline-dark">&larr; Backa</button></Link>
             </div>
         </div>
-        
     )
 }

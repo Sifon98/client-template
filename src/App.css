@@ -4,29 +4,6 @@
   min-height: 100vh;
 }
 
-.card-long {
-  width: 380px !important;
-  height: 600px !important;
-  padding: 10px !important;
-}
-
-.card button {
-  margin: 5px;
-  height: 40px;
-  width: 100px;
-  align-self: center;
-}
-
-.create-form{
-  text-align: start;
-}
-
-.create-button {
-  height: 60px;
-  width: 250px;
-  font-size: 25px !important;
-}
-
 nav {
   height: 8vh;
   width: 100%;
@@ -34,35 +11,6 @@ nav {
   position: relative;
 }
 
-label{
-  color: black;
-  font-size: 18px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0px;
-}
-
-.item-head {
-  font-size: 25px;
-  font-weight: 500;
-  margin: 0px;
-}
-
-img {
-  width: 80%;
-  height: auto;
-}
-
 .padding-bot {
   padding-bottom: 40px;
-}
-
-.validate {
-  border: 2px solid green !important;
-}
-
-.no-validate {
-  border: 2px solid red !important;
 }

@@ -1,15 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import styles from '../styleModules/manage.module.css';
 
 function ManageComp({ post, deletePost }) {
     return (
         <tr>
-            <th>{post.title}</th>
-            <td>{post.price}</td>
-            <td>{post.stock}</td>
+            <td>{post.title}</td>
+            <td>{post.price} kr</td>
+            <td>{post.stock} st</td>
             <td>            
-                <Link to={`/update-post/${post['_id']}`}><button className="btn btn-primary">Update</button></Link>
-                <button className="btn btn-danger" onClick={(e) => deletePost(post['_id'])}>Delete</button>
+                <Link to={`/update-post/${post['_id']}`}><button className="btn btn-primary btn-manage">Uppdatera</button></Link>
+                <button className={`btn btn-danger ${styles.btnManage}`} onClick={(e) => deletePost(post['_id'])}>Ta bort</button>
             </td>
         </tr>
     )

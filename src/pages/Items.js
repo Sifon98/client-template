@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import ItemComp from '../components/ItemComp';
 import { Link } from 'react-router-dom';
 import { motion } from "framer-motion";
+import styles from '../components/styleModules/items.module.css';
 
 export default function Home() {
     const [posts, setPosts] = useState([]);
@@ -31,9 +32,9 @@ export default function Home() {
             <div className="row">
                 {posts.map(post => 
                     <motion.div key={post['_id']} initial={{ scale: 0.5, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 0.8 }}>
-                        <div className="card card-long mt-4">
+                        <div className={`${styles.length} card mt-4`}>
                             {/* Gets the posts and adds a link to the posts via react-router-dom */}
-                            <ItemComp post={post} test="long" />
+                            <ItemComp post={post} length="long" />
                             <Link to={`/item-page/${post['_id']}`} ><button className="btn btn-outline-dark m-2">Se mer</button></Link>
                         </div>
                     </motion.div>
