@@ -47,8 +47,8 @@ export default function UpdateItem({match}) {
     // Displays a form with functions from UpdateItem
     return (
         <div>
-            <h1 className="m-4">Update</h1>
-            <Form post={post} handleSubmit={handleSubmit} handleChange={handleChange} code="Update"/>
+            <h1 className="m-4">Uppdatera</h1>
+            <Form post={post} handleSubmit={handleSubmit} handleChange={handleChange} code="Uppdatera"/>
         </div>
     )
 }

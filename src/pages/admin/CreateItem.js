@@ -36,8 +36,8 @@ export default function CreateItem() {
     // Displays a form with functions from CreateItem
     return (
         <div>
-            <h1 className="m-4">Create</h1>
-            <Form post={post} handleSubmit={handleSubmit} handleChange={handleChange} code="Create"/>
+            <h1 className="m-4">Skapa</h1>
+            <Form post={post} handleSubmit={handleSubmit} handleChange={handleChange} code="Skapa"/>
         </div>
     )
 }

@@ -32,6 +32,5 @@ function App() {
 // ATT GÖRA
 //
 // Göra CSS modules istället för allt i App.css
-// Style table bättre
 
 export default App;
